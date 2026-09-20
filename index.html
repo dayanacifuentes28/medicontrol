@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MediControl – Propuesta de innovación y prototipo MVP</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="mark" href="#top">MEDICONTROL</a>
+    <nav aria-label="Navegación principal">
+      <a href="#intro">Propuesta</a>
+      <a href="#anexo-b">Prototipo</a>
+      <a href="#referencias">Referencias</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="site-hero">
+    <div class="wrap">
+      <div class="hero-logo" aria-hidden="true">
+        <svg viewBox="0 0 96 96" role="img">
+          <rect x="2" y="2" width="92" height="92" rx="24" fill="#17454f"/>
+          <rect x="2" y="2" width="92" height="92" rx="24" fill="none" stroke="#f6efe6" stroke-width="3"/>
+          <rect x="26" y="42" width="44" height="12" rx="6" fill="#b5d8c7"/>
+          <rect x="42" y="26" width="12" height="44" rx="6" fill="#b5d8c7"/>
+        </svg>
+      </div>
+      <h1>MEDICONTROL</h1>
+      <p class="sub">GESTIÓN DE MEDICAMENTOS</p>
+      <p class="lead">Propuesta de innovación para apoyar la organización, la consulta y el seguimiento de la información de medicamentos en farmacias, con un prototipo mínimo viable que puedes probar aquí.</p>
+      <div class="cta">
+        <a class="btn mint" href="#anexo-b">Probar el prototipo</a>
+        <a class="btn line" href="#intro">Leer la propuesta</a>
+      </div>
+      <dl class="meta">
+        <div><dt>Autores</dt><dd>Dayana Cifuentes Albino y Juan Sebastián Jiménez</dd></div>
+        <div><dt>Docente</dt><dd>Julián Andrés Castaño Espinosa</dd></div>
+        <div><dt>Programa</dt><dd>Técnica profesional en registros de procesos productivos (nivel Técnico)</dd></div>
+        <div><dt>Ficha y periodo</dt><dd>Ficha 54408, periodo académico 2026</dd></div>
+        <div><dt>Institución</dt><dd>Escuela de Ingenierías, Bogotá D.C.</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section class="doc toc" aria-labelledby="indice">
+      <h2 id="indice">Índice</h2>
+      <ol>
+        <li><a href="#intro">Introducción</a></li>
+        <li><a href="#objetivos">Objetivos</a></li>
+        <li><a href="#problema">Problema y oportunidad</a></li>
+        <li><a href="#valor">Propuesta de valor y tipo de innovación</a></li>
+        <li><a href="#validacion">Validación de la propuesta</a></li>
+        <li><a href="#vigilancia">Vigilancia tecnológica</a></li>
+        <li><a href="#ecosistema">Ecosistema de apoyo</a></li>
+        <li><a href="#siguiente">Siguiente paso realista</a></li>
+        <li><a href="#pitch">Pitch de una página</a></li>
+        <li><a href="#conclusiones">Conclusiones</a></li>
+        <li><a href="#referencias">Referencias</a></li>
+        <li><a href="#anexos">Anexos</a></li>
+      </ol>
+    </section>
+
+    <section class="doc" id="intro" aria-labelledby="h-intro">
+      <h2 id="h-intro">1. Introducción</h2>
+      <p>La innovación permite transformar necesidades identificadas en propuestas que generen valor para usuarios y organizaciones. En el contexto de las farmacias, la gestión de información relacionada con medicamentos puede involucrar diferentes actividades de registro, consulta y seguimiento. Esta situación plantea una oportunidad para analizar cómo una herramienta digital podría apoyar estos procesos.</p>
+      <p>A partir de esta oportunidad se propone MediControl, un sistema digital concebido para centralizar información, facilitar su consulta y apoyar el seguimiento de actividades mediante registros organizados y alertas.</p>
+      <div class="note">La propuesta no pretende reemplazar las responsabilidades del personal ni las obligaciones sanitarias del establecimiento, sino funcionar como una herramienta de apoyo a la gestión.</div>
+    </section>
+
+    <section class="doc" id="objetivos" aria-labelledby="h-obj">
+      <h2 id="h-obj">2. Objetivos</h2>
+      <h3>2.1. Objetivo general</h3>
+      <p>Diseñar una propuesta de innovación digital que apoye la organización, consulta y seguimiento de información relacionada con la gestión de medicamentos en farmacias mediante el sistema MediControl.</p>
+      <h3>2.2. Objetivos específicos</h3>
+      <ul class="plain">
+        <li>Identificar y delimitar una problemática relacionada con la organización y seguimiento de información en procesos de gestión de medicamentos.</li>
+        <li>Definir una propuesta de valor centrada en las necesidades del usuario.</li>
+        <li>Clasificar la propuesta de acuerdo con el Manual de Oslo 2018 y justificar la clasificación.</li>
+        <li>Validar preliminarmente la propuesta mediante FODA, Canvas y un producto mínimo viable.</li>
+        <li>Identificar tendencias y soluciones tecnológicas relacionadas con la gestión digital de farmacias.</li>
+        <li>Reconocer entidades del ecosistema que podrían apoyar el desarrollo posterior de la iniciativa.</li>
+      </ul>
+    </section>
+
+    <section class="doc" id="problema" aria-labelledby="h-prob">
+      <h2 id="h-prob">3. Problema y oportunidad</h2>
+      <h3>3.1. Problema–hipótesis</h3>
+      <p>Como punto de partida del proyecto se plantea la siguiente hipótesis de problema: cuando la información relacionada con la gestión de medicamentos se encuentra distribuida entre registros manuales o herramientas que no están integradas, el personal puede tener mayores dificultades para localizar y hacer seguimiento de la información de manera oportuna.</p>
+      <div class="note">Esta afirmación se considera una hipótesis de diseño y no una medición estadística del sector. Por ello, una de las primeras actividades de validación del proyecto será contrastarla con usuarios reales mediante entrevistas o pruebas de usuario.</div>
+      <h3>3.2. Oportunidad</h3>
+      <p>La oportunidad consiste en explorar una herramienta digital que centralice información y facilite determinadas actividades de consulta y seguimiento. La propuesta se enfoca en mejorar la experiencia del usuario y reducir la dispersión de información dentro del proceso, sin sustituir los controles profesionales o sanitarios exigidos por la normativa.</p>
+      <h3>3.3. Ideación y selección</h3>
+      <div class="scroll"><table class="t">
+        <thead><tr><th>Alternativa</th><th>Descripción</th><th>Razón para considerarla</th></tr></thead>
+        <tbody>
+          <tr class="pick"><td>MediControl (seleccionada)</td><td>Sistema digital para centralizar información y apoyar el seguimiento de la gestión de medicamentos.</td><td>Integra varias necesidades en una sola propuesta y permite construir un MVP.</td></tr>
+          <tr><td>FarmaAlerta</td><td>Herramienta enfocada en alertas relacionadas con fechas y controles.</td><td>Es sencilla de prototipar, pero tiene un alcance más limitado.</td></tr>
+          <tr><td>FarmaTrack</td><td>Sistema para registrar y consultar actividades y movimientos de gestión.</td><td>Facilita la trazabilidad de registros, pero requiere delimitar bien su alcance.</td></tr>
+        </tbody></table></div>
+      <p>Se selecciona MediControl porque ofrece un alcance suficientemente amplio para demostrar creatividad e innovación, pero permite comenzar con una versión mínima verificable. La selección también facilita conectar el problema con las etapas posteriores de validación y vigilancia tecnológica.</p>
+    </section>
+
+    <section class="doc" id="valor" aria-labelledby="h-valor">
+      <h2 id="h-valor">4. Propuesta de valor y tipo de innovación</h2>
+      <h3>4.1. Propuesta de valor</h3>
+      <p>MediControl propone una herramienta digital de apoyo para que el personal de una farmacia pueda organizar, consultar y hacer seguimiento de información relacionada con medicamentos desde un espacio centralizado. El valor esperado se concentra en facilitar el acceso a la información y apoyar la gestión cotidiana mediante registros y alertas configuradas de acuerdo con el alcance del sistema.</p>
+      <div class="scroll"><table class="t">
+        <thead><tr><th>Elemento</th><th>Definición para MediControl</th></tr></thead>
+        <tbody>
+          <tr><td>Usuario</td><td>Personal administrativo y de gestión de medicamentos en farmacias.</td></tr>
+          <tr><td>Necesidad</td><td>Contar con información organizada y fácil de consultar para apoyar el seguimiento.</td></tr>
+          <tr><td>Solución</td><td>Sistema digital con registro, consulta, panel y alertas.</td></tr>
+          <tr><td>Beneficio esperado</td><td>Mayor facilidad de consulta y seguimiento de la información.</td></tr>
+          <tr><td>Diferenciación</td><td>Enfoque inicial en necesidades del usuario y validación mediante MVP.</td></tr>
+        </tbody></table></div>
+      <h3>4.2. Tipo de innovación según el Manual de Oslo</h3>
+      <p>El Manual de Oslo 2018 define la innovación empresarial en términos de productos y procesos empresariales. Una innovación de proceso empresarial corresponde a un proceso nuevo o mejorado para una o más funciones empresariales que difiere significativamente de los procesos anteriores de la empresa y ha sido puesto en uso. Entre las funciones consideradas se encuentran los sistemas de información y comunicación y las funciones administrativas y de gestión.</p>
+      <p>Por esta razón, MediControl se plantea principalmente como una <strong>innovación de proceso empresarial</strong>: su propósito central es mejorar la forma en que se organiza, consulta y hace seguimiento de información dentro de la farmacia mediante una solución digital. El componente tecnológico no constituye por sí solo la innovación; la innovación está en el cambio que se pretende introducir en el proceso.</p>
+      <p>Si MediControl se desarrolla posteriormente como un servicio digital ofrecido a otras farmacias, también podría analizarse desde la perspectiva de innovación de producto/servicio. Sin embargo, para esta entrega se mantendrá como clasificación principal la innovación de proceso empresarial, por ser la que mejor representa el objetivo del proyecto.</p>
+    </section>
+
+    <section class="doc" id="validacion" aria-labelledby="h-val">
+      <h2 id="h-val">5. Validación de la propuesta</h2>
+      <h3>5.1. Análisis FODA</h3>
+      <div class="foda">
+        <div class="f"><h4>Fortalezas</h4><ul><li>Centraliza información.</li><li>Facilita consulta y seguimiento.</li><li>Permite incorporar alertas.</li><li>Puede iniciar como prototipo.</li></ul></div>
+        <div class="o"><h4>Oportunidades</h4><ul><li>Mayor adopción de herramientas digitales en las organizaciones.</li><li>Posibilidad de atender pequeñas y medianas farmacias.</li><li>Interés por mejorar eficiencia y organización de procesos.</li><li>Ecosistema local de innovación y emprendimiento.</li></ul></div>
+        <div class="d"><h4>Debilidades</h4><ul><li>Requiere desarrollo y mantenimiento tecnológico.</li><li>Necesita capacitación inicial.</li><li>El MVP tendrá funciones limitadas.</li><li>Requiere gestionar adecuadamente la información.</li></ul></div>
+        <div class="a"><h4>Amenazas</h4><ul><li>Existencia de soluciones comerciales similares.</li><li>Resistencia al cambio.</li><li>Costos de implementación y soporte.</li><li>Riesgos de seguridad y protección de datos.</li></ul></div>
+      </div>
+      <p>El FODA indica que el principal reto no es únicamente tecnológico, sino también de adopción y diferenciación. Por ello, la estrategia propuesta es validar primero una versión pequeña, recoger evidencia de uso y ajustar la solución antes de ampliar su alcance.</p>
+
+      <h3>5.2. Canvas – Modelo de negocio</h3>
+      <div class="canvas">
+        <div class="c-socios"><h4>Socios clave</h4>Farmacias para pruebas, entidades de innovación, instituciones educativas y proveedores tecnológicos.</div>
+        <div class="c-actividades"><h4>Actividades clave</h4>Diseño, prototipado, pruebas, análisis de resultados y mejora.</div>
+        <div class="c-recursos"><h4>Recursos clave</h4>Software, equipo de desarrollo, diseño UX/UI, base de datos e infraestructura.</div>
+        <div class="c-valor"><h4>Propuesta de valor</h4>Herramienta digital para organizar, consultar y apoyar el seguimiento de información.</div>
+        <div class="c-relacion"><h4>Relación con clientes</h4>Capacitación, soporte, tutoriales y retroalimentación.</div>
+        <div class="c-canales"><h4>Canales</h4>Plataforma web, demostraciones, contacto directo y alianzas.</div>
+        <div class="c-segmentos"><h4>Segmentos de clientes</h4>Farmacias independientes, pequeñas y medianas empresas farmacéuticas y responsables de gestión.</div>
+        <div class="c-costos"><h4>Estructura de costos</h4>Desarrollo, infraestructura, mantenimiento, soporte, capacitación y promoción.</div>
+        <div class="c-ingresos"><h4>Fuentes de ingresos</h4>Suscripción, planes por usuarios/funciones y servicios de implementación, en una eventual etapa comercial.</div>
+      </div>
+
+      <h3>5.3. Producto Mínimo Viable – MVP</h3>
+      <p>El MVP será un prototipo funcional de baja escala que permita comprobar si un usuario puede completar tareas básicas relacionadas con el registro, consulta y seguimiento de información.</p>
+      <ul class="plain">
+        <li>Pantalla de acceso.</li>
+        <li>Panel principal.</li>
+        <li>Registro de medicamentos.</li>
+        <li>Búsqueda y consulta.</li>
+        <li>Módulo de alertas.</li>
+        <li>Registro y consulta de actividades.</li>
+      </ul>
+      <p>La prueba inicial podrá realizarse con usuarios que conozcan procesos de farmacia. Se observará si pueden completar tareas previamente definidas y se aplicará una encuesta breve. Los indicadores serán facilidad de uso, tiempo de realización de tareas, errores, comprensión de funciones y satisfacción.</p>
+      <p><a class="btn mint" href="#anexo-b">Probar el MVP en el Anexo b</a></p>
+
+      <h3>5.4. Criterio de decisión del MVP</h3>
+      <p>El MVP se considerará prometedor si la mayoría de los usuarios participantes logra completar las tareas principales sin asistencia constante y si las observaciones permiten identificar mejoras concretas. Los resultados no demostrarán por sí solos la viabilidad comercial del sistema, pero servirán para decidir si conviene iterar el prototipo, modificar el problema planteado o avanzar a una prueba piloto.</p>
+    </section>
+
+    <section class="doc" id="vigilancia" aria-labelledby="h-vig">
+      <h2 id="h-vig">6. Vigilancia tecnológica</h2>
+      <p>La vigilancia tecnológica busca conocer el entorno de la solución antes de afirmar que existe una innovación. La revisión realizada identifica tendencias de digitalización y referentes comerciales que ya incorporan funciones de gestión de farmacias.</p>
+      <h3>6.1. Tendencia de digitalización</h3>
+      <p>El Manual de Oslo 2018 reconoce que la digitalización tiene relación con la innovación y que las tecnologías digitales pueden formar parte de innovaciones de productos y de procesos empresariales. También señala que las capacidades para gestionar tecnologías digitales y datos son relevantes para aprovechar oportunidades de innovación.</p>
+      <h3>6.2. Referentes</h3>
+      <div class="scroll"><table class="t">
+        <thead><tr><th>Referente</th><th>Hallazgo para el proyecto</th></tr></thead>
+        <tbody>
+          <tr><td>Aliaddo</td><td>Cuenta con una solución para farmacias y droguerías que integra funciones como inventario, punto de venta y facturación.</td></tr>
+          <tr><td>YarOM Farmacia</td><td>Presenta funciones relacionadas con inventario, lotes, vencimientos y Kardex.</td></tr>
+          <tr><td>Soluciones internacionales de gestión farmacéutica</td><td>Muestran una tendencia a integrar inventario, seguimiento de lotes, vencimientos y alertas.</td></tr>
+        </tbody></table></div>
+      <p>Los referentes muestran que la gestión digital de farmacias ya cuenta con soluciones en el mercado. Por tanto, MediControl no debe presentarse como una tecnología inexistente, sino como una propuesta académica cuyo valor innovador debe demostrarse mediante una mejora significativa para el usuario y una validación concreta.</p>
+      <h3>6.3. Oportunidad de diferenciación</h3>
+      <p>La oportunidad de MediControl está en comenzar con un alcance reducido y centrado en el usuario, validar el problema antes de desarrollar una plataforma completa y utilizar los resultados del MVP para decidir qué funciones tienen mayor valor. Esta estrategia reduce el riesgo de construir funcionalidades que no respondan a una necesidad real.</p>
+    </section>
+
+    <section class="doc" id="ecosistema" aria-labelledby="h-eco">
+      <h2 id="h-eco">7. Ecosistema de apoyo</h2>
+      <div class="scroll"><table class="t">
+        <thead><tr><th>Entidad</th><th>Posible aporte a MediControl</th></tr></thead>
+        <tbody>
+          <tr><td>Cámara de Comercio de Bogotá – Innovalab</td><td>Acompañamiento en innovación, diseño empresarial, prototipado y conexión con el ecosistema de emprendimiento.</td></tr>
+          <tr><td>iNNpulsa Colombia</td><td>Posible acceso a programas y convocatorias de emprendimiento e innovación, sujeto a requisitos.</td></tr>
+          <tr><td>SENA – Fondo Emprender</td><td>Acompañamiento para estructuración de iniciativas y posibilidades de financiación cuando se cumplan los requisitos de las convocatorias.</td></tr>
+        </tbody></table></div>
+      <p>Estas entidades se consideran posibles aliados y no fuentes de financiación garantizadas. La pertinencia real dependerá de la etapa del proyecto, los requisitos vigentes y la disponibilidad de convocatorias.</p>
+    </section>
+
+    <section class="doc" id="siguiente" aria-labelledby="h-sig">
+      <h2 id="h-sig">8. Siguiente paso realista</h2>
+      <ol class="steps">
+        <li><b>Descubrimiento</b><span>Entrevistas o conversaciones estructuradas con usuarios. Resultado esperado: confirmar o ajustar la hipótesis de problema.</span></li>
+        <li><b>Diseño</b><span>Diseñar las pantallas y flujo básico. Resultado esperado: prototipo navegable.</span></li>
+        <li><b>Validación</b><span>Realizar tareas con usuarios y encuesta. Resultado esperado: datos sobre facilidad, utilidad y dificultades.</span></li>
+        <li><b>Iteración</b><span>Modificar el prototipo según resultados. Resultado esperado: MVP mejorado.</span></li>
+        <li><b>Piloto</b><span>Probar en un establecimiento dispuesto a participar. Resultado esperado: evidencia inicial para decidir si se continúa.</span></li>
+      </ol>
+    </section>
+
+    <section class="doc" id="pitch" aria-labelledby="h-pitch">
+      <h2 id="h-pitch">9. Pitch de una página</h2>
+      <p><strong>MediControl es una herramienta digital de apoyo para el personal de farmacias.</strong> Reúne en un solo lugar el registro de medicamentos, su consulta y el seguimiento mediante alertas y un historial de actividades.</p>
+      <p><strong>El punto de partida es una hipótesis, no un dato:</strong> cuando la información está repartida entre registros manuales o herramientas que no se comunican, puede ser más difícil encontrarla y hacerle seguimiento a tiempo. Antes de afirmarlo, lo contrastaremos con usuarios reales.</p>
+      <p><strong>Es una innovación de proceso empresarial</strong> según el Manual de Oslo 2018: cambia la forma en que la farmacia organiza, consulta y hace seguimiento de su información. No reemplaza al personal ni los controles sanitarios.</p>
+      <p><strong>Sabemos que ya existen soluciones comerciales.</strong> Por eso no decimos que seremos los primeros: empezamos con un alcance pequeño, centrado en el usuario, y dejamos que los resultados del MVP indiquen qué funciones valen la pena.</p>
+      <p><strong>Lo que sigue:</strong> entrevistas con usuarios, prueba de tareas con el prototipo, ajustes y, si los resultados son prometedores, un piloto en una farmacia dispuesta a participar. Entidades como Innovalab, iNNpulsa y el SENA son posibles aliados, sin financiación garantizada.</p>
+    </section>
+
+    <section class="doc" id="conclusiones" aria-labelledby="h-con">
+      <h2 id="h-con">10. Conclusiones</h2>
+      <p>MediControl presenta una oportunidad de innovación basada en el uso de tecnologías digitales para apoyar la gestión y el seguimiento de información en farmacias. La propuesta parte de una hipótesis de problema que deberá ser validada con usuarios, lo cual fortalece la coherencia del proyecto al diferenciar las afirmaciones comprobadas de las que todavía deben investigarse.</p>
+      <p>La clasificación principal como innovación de proceso empresarial se sustenta en el objetivo de modificar y mejorar una función de gestión mediante una solución digital. El FODA, el Canvas y el MVP permiten analizar la propuesta desde perspectivas complementarias y plantear una primera ruta de validación.</p>
+      <p>La vigilancia tecnológica evidencia que existen soluciones similares, por lo que el proyecto no debe basar su diferenciación en afirmar que es el primero, sino en demostrar una propuesta de valor clara, centrada en el usuario y validada progresivamente. El siguiente paso consiste en comprobar la necesidad con usuarios y, a partir de sus resultados, ajustar el prototipo.</p>
+    </section>
+
+    <section class="doc" id="referencias" aria-labelledby="h-ref">
+      <h2 id="h-ref">11. Referencias</h2>
+      <ul class="plain">
+        <li>OECD/Eurostat. (2018). <em>Oslo Manual 2018: Guidelines for Collecting, Reporting and Using Data on Innovation</em> (4th ed.). OECD Publishing. <a href="https://doi.org/10.1787/9789264304604-en">https://doi.org/10.1787/9789264304604-en</a></li>
+        <li>Cámara de Comercio de Bogotá. (2026). <em>Innovación empresarial – Innovalab</em>. <a href="https://www.ccb.org.co/servicios/haz-crecer-tu-empresa/innovacion-empresarial">https://www.ccb.org.co/servicios/haz-crecer-tu-empresa/innovacion-empresarial</a></li>
+        <li>Cámara de Comercio de Bogotá. (2026). <em>Sprints de innovación</em>. <a href="https://www.ccb.org.co/servicios/haz-crecer-tu-empresa/innovacion-empresarial/sprints-de-innovacion">https://www.ccb.org.co/servicios/haz-crecer-tu-empresa/innovacion-empresarial/sprints-de-innovacion</a></li>
+        <li>Aliaddo. (2026). <em>Solución para farmacias y droguerías</em>. <a href="https://aliaddo.com/sector/farmacias/">https://aliaddo.com/sector/farmacias/</a></li>
+        <li>YarOM. (2026). <em>Solución para farmacia</em>. <a href="https://www.yarom.com.co/farmacia">https://www.yarom.com.co/farmacia</a></li>
+      </ul>
+    </section>
+
+    <section class="doc" id="anexos" aria-labelledby="h-anx">
+      <h2 id="h-anx">12. Anexos</h2>
+
+      <h3 id="anexo-a">Anexo a. Diagrama del flujo de MediControl</h3>
+      <div class="flow">
+        <ol class="flow-main">
+          <li>Inicio</li>
+          <li>Pantalla de acceso</li>
+          <li class="dec">¿Usuario y contraseña completos?</li>
+          <li class="ok">Panel principal</li>
+        </ol>
+        <p class="small">Si falta algún dato, el sistema muestra un mensaje y pide intentarlo de nuevo. Desde «Mi perfil», cerrar sesión vuelve a la pantalla de acceso.</p>
+        <p style="margin-top:18px"><strong>Desde el panel principal, la persona elige:</strong></p>
+        <div class="branches">
+          <div class="branch"><h4>Consultar</h4><ol><li>Buscar por nombre o lote</li><li>Filtrar por stock bajo</li><li>Ver el detalle del medicamento</li><li>Queda en «Últimas consultas»</li></ol></div>
+          <div class="branch"><h4>Registrar</h4><ol><li>Completar el formulario</li><li>Guardar el medicamento</li><li>Se actualizan los contadores</li></ol></div>
+          <div class="branch"><h4>Alertas</h4><ol><li>Ver stock bajo y próximos vencimientos</li><li>Ajustar los umbrales</li></ol></div>
+          <div class="branch"><h4>Actividades</h4><ol><li>Registrar una entrada o salida</li><li>Se actualiza el stock</li><li>Consultar el historial</li></ol></div>
+        </div>
+        <p class="cap">Figura 1. Flujo de uso del MVP de MediControl.</p>
+      </div>
+
+      <h3 id="anexo-b">Anexo b. Prototipo/MVP de MediControl</h3>
+    </section>
+  </div>
+
+  <div class="proto on-deep" aria-labelledby="h-proto">
+    <div class="wrap">
+      <h3 id="h-proto" style="margin-top:0;font-size:1.6rem">Prototipo interactivo</h3>
+      <p>Representa las principales interfaces propuestas para el MVP: acceso al sistema, panel principal, registro de medicamentos, búsqueda y consulta, alertas, y registro y consulta de actividades. Puedes escribir cualquier usuario y contraseña para entrar.</p>
+      <div class="proto-grid">
+        <div class="phone" id="phone" role="region" aria-label="Prototipo de MediControl">
+          <div class="a-view" id="a-view">
+
+            <section class="a-screen" id="a-login" aria-labelledby="a-login-t">
+              <div class="a-brand"><h2>MEDICONTROL</h2><p>GESTIÓN DE MEDICAMENTOS</p></div>
+              <h3 id="a-login-t">Bienvenido</h3>
+              <form id="a-login-form" novalidate>
+                <input class="a-field" id="a-user" type="text" placeholder="usuario" autocomplete="username" aria-label="Usuario">
+                <input class="a-field" id="a-pass" type="password" placeholder="Contraseña" autocomplete="current-password" aria-label="Contraseña">
+                <button class="a-btn" type="submit">Iniciar sesión</button>
+                <p class="a-msg" id="a-login-msg" role="status" aria-live="polite"></p>
+              </form>
+              <button class="a-link" id="a-forgot" type="button">¿Olvidaste tu contraseña?</button>
+            </section>
+
+            <section class="a-screen" id="a-panel" hidden>
+              <div class="a-hero"><div class="a-brand"><h2>MEDICONTROL</h2><p>GESTIÓN DE MEDICAMENTOS</p></div></div>
+              <div class="a-sheet">
+                <h3>Panel principal</h3>
+                <p class="a-sub">Resumen de gestión</p>
+                <div class="a-status"><span class="a-dot" aria-hidden="true">✓</span> SISTEMA ACTIVO</div>
+                <div class="a-stat mint">
+                  <span class="a-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 17h.01M12 17h.01" stroke-width="2.4"/></svg></span>
+                  <span class="a-txt">Medicamentos registrados<small>TOTAL</small></span><span class="a-num" id="a-n-total">12</span>
+                </div>
+                <button class="a-stat mist" type="button" data-go="alertas">
+                  <span class="a-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s6-5.4 6-10.5A6 6 0 0 0 6 10.5C6 15.6 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.2"/></svg></span>
+                  <span class="a-txt">Alertas pendientes<small>PENDIENTES</small></span><span class="a-num" id="a-n-alerts">2</span>
+                </button>
+                <button class="a-stat sand" type="button" data-go="actividades">
+                  <span class="a-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 10h6M9 14h6M9 18h3"/></svg></span>
+                  <span class="a-txt">Actividades registradas<small>HISTORIAL</small></span><span class="a-num" id="a-n-acts">0</span>
+                </button>
+                <div class="a-updated"><span>Última actualización</span><b id="a-updated">12:30 hs</b></div>
+                <div class="a-actions">
+                  <button class="p" id="a-b-consultar" type="button">Consultar</button>
+                  <button class="s" id="a-b-registrar" type="button">Registrar</button>
+                </div>
+              </div>
+            </section>
+
+            <section class="a-screen" id="a-meds" hidden>
+              <div class="a-top">
+                <div class="a-tabs"><button class="on" type="button" data-go="meds">Medicamentos</button><button type="button" data-go="perfil">Mi perfil</button></div>
+                <button class="a-filt" id="a-filt-btn" type="button" aria-expanded="false" aria-controls="a-chips">Filtros
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7z"/></svg></button>
+                <div class="a-chips" id="a-chips" hidden>
+                  <button type="button" data-filter="todos" aria-pressed="true">Todos</button>
+                  <button type="button" data-filter="alerta" aria-pressed="false">Con alertas</button>
+                </div>
+                <label class="a-search">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
+                  <input id="a-q" type="search" placeholder="Buscar medicamento..." autocomplete="off" aria-label="Buscar medicamento">
+                </label>
+              </div>
+              <div class="a-count"><span>Resultados</span><b id="a-count">4</b></div>
+              <div class="a-body">
+                <h4>Medicamentos<br>encontrados</h4>
+                <ul class="a-list" id="a-list" aria-live="polite"></ul>
+                <hr class="a-hr">
+                <h4>Últimas consultas</h4>
+                <ul class="a-recent" id="a-recent"></ul>
+              </div>
+            </section>
+
+            <section class="a-screen" id="a-perfil" hidden>
+              <div class="a-top short"><div class="a-tabs" style="margin:0"><button type="button" data-go="meds">Medicamentos</button><button class="on" type="button" data-go="perfil">Mi perfil</button></div></div>
+              <div class="a-plain">
+                <h3>Mi perfil</h3>
+                <p>Usuario: <strong id="a-who">—</strong></p>
+                <p>Medicamentos registrados: <strong id="a-p-total">0</strong></p>
+                <p>Actividades registradas: <strong id="a-p-acts">0</strong></p>
+                <button class="a-out" id="a-logout" type="button">Cerrar sesión</button>
+              </div>
+            </section>
+
+            <section class="a-screen" id="a-alertas" hidden>
+              <div class="a-top short"><div class="a-tabs" style="margin:0"><span class="on">Alertas</span></div></div>
+              <div class="a-plain">
+                <h3>Alertas pendientes</h3>
+                <ul class="a-list" id="a-alert-list"></ul>
+                <form class="a-form" id="a-cfg" novalidate>
+                  <strong style="color:var(--ink)">Configurar alertas</strong>
+                  <div class="row">
+                    <label>Stock bajo (unidades o menos)<input id="a-cfg-stock" type="number" min="0" value="20"></label>
+                    <label>Vence en (días o menos)<input id="a-cfg-dias" type="number" min="0" value="90"></label>
+                  </div>
+                  <p class="a-msg" id="a-cfg-msg" role="status"></p>
+                  <button type="submit">Aplicar</button>
+                </form>
+              </div>
+            </section>
+
+            <section class="a-screen" id="a-actividades" hidden>
+              <div class="a-top short"><div class="a-tabs" style="margin:0"><span class="on">Actividades</span></div></div>
+              <div class="a-plain">
+                <h3>Registrar actividad</h3>
+                <form class="a-form" id="a-mov" novalidate>
+                  <label>Medicamento<select id="a-mov-med"></select></label>
+                  <div class="row">
+                    <label>Tipo<select id="a-mov-tipo"><option value="salida">Salida de stock</option><option value="entrada">Entrada de stock</option></select></label>
+                    <label>Cantidad<input id="a-mov-qty" type="number" min="1" placeholder="10"></label>
+                  </div>
+                  <p class="a-msg" id="a-mov-msg" role="status" aria-live="polite"></p>
+                  <button type="submit">Registrar</button>
+                </form>
+                <h3 style="font-size:1.4rem">Historial</h3>
+                <select class="a-sel" id="a-hist-f" aria-label="Filtrar historial">
+                  <option value="todas">Todas las actividades</option>
+                  <option value="Movimiento">Movimientos</option>
+                  <option value="Consulta">Consultas</option>
+                  <option value="Registro">Registros</option>
+                  <option value="Alerta">Alertas</option>
+                  <option value="Acceso">Accesos</option>
+                </select>
+                <ul class="a-hist" id="a-hist"></ul>
+              </div>
+            </section>
+          </div>
+
+          <nav class="a-nav" id="a-nav" aria-label="Navegación del prototipo" hidden>
+            <button type="button" data-go="panel"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 2 12h3v8h5v-5h4v5h5v-8h3z"/></svg>Inicio</button>
+            <button type="button" data-go="meds"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>Consultar</button>
+            <button type="button" data-go="actividades"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm2 5v2h6V8zm0 4v2h6v-2zm0 4v2h3v-2z"/></svg>Actividades</button>
+            <button type="button" data-go="alertas"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5a6.5 6.5 0 0 0-6.5 6.5v4.2L3.5 17v1.5h17V17l-2-3.8V9A6.5 6.5 0 0 0 12 2.5zM9.5 20a2.5 2.5 0 0 0 5 0z"/></svg>Alertas<span class="a-badge" id="a-badge" hidden>0</span></button>
+          </nav>
+          <div class="a-toast" id="a-toast" hidden role="status"></div>
+        </div>
+
+        <div class="proto-side">
+          <h4>Tareas de prueba</h4>
+          <p class="prog" id="a-prog">0 de 6 tareas completadas</p>
+          <ul class="tasks" id="a-tasks"></ul>
+          <p class="small" id="a-tasks-end" hidden>Tareas completadas. En una validación real, aquí se medirían el tiempo, los errores, la comprensión de funciones y la satisfacción, tal como plantea la sección 5.3.</p>
+          <button class="reset" id="a-reset" type="button">Reiniciar prototipo</button>
+          <h4>Qué es y qué no es</h4>
+          <p class="small">Es un prototipo académico de baja escala. No usa servidor: los datos se guardan solo en este navegador (localStorage) y no se comparten entre dispositivos. No sustituye las responsabilidades del personal ni los controles sanitarios del establecimiento.</p>
+        </div>
+      </div>
+      <p class="cap">Figura 2. Prototipo de MediControl. Representación de las principales interfaces propuestas para el MVP, incluyendo el acceso al sistema, el panel principal y la consulta de medicamentos.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>ACA – Propuesta de Innovación MediControl.</strong> Proyecto académico de Dayana Cifuentes Albino y Juan Sebastián Jiménez. Ficha 54408, Escuela de Ingenierías, Bogotá D.C., 2026.</p>
+    <p>MediControl es una propuesta en etapa de validación. Las afirmaciones sobre el problema son hipótesis de diseño que se contrastarán con usuarios reales.</p>
+  </div>
+</footer>
+
+<dialog id="a-dlg-reg">
+  <form id="a-reg-form" novalidate>
+    <h3>Registrar medicamento</h3>
+    <label>Nombre y dosis<input id="a-r-name" placeholder="Ibuprofeno 400 mg"></label>
+    <label>Lote<input id="a-r-lote" placeholder="L00789"></label>
+    <label>Stock (unidades)<input id="a-r-stock" type="number" min="0" placeholder="50"></label>
+    <label>Vencimiento<input id="a-r-date" type="date"></label>
+    <p class="dlg-msg" id="a-r-msg" role="alert"></p>
+    <div class="dlg-actions"><button class="s" type="button" id="a-r-cancel">Cancelar</button><button class="p" type="submit">Guardar</button></div>
+  </form>
+</dialog>
+
+<dialog id="a-dlg-det">
+  <h3 id="a-d-title">Medicamento</h3>
+  <div class="dl" id="a-d-body"></div>
+  <div class="dlg-actions"><button class="s" type="button" id="a-d-close">Cerrar</button><button class="p" type="button" id="a-d-mov">Registrar movimiento</button></div>
+</dialog>
+
+<script src="js/app.js"></script>
+</body>
+</html>
