@@ -282,6 +282,10 @@
                 <p class="a-msg" id="a-login-msg" role="status" aria-live="polite"></p>
               </form>
               <button class="a-link" id="a-forgot" type="button">¿Olvidaste tu contraseña?</button>
+              <div class="a-demo">
+                <strong>Prototipo MVP</strong>
+                <span>Puedes entrar con cualquier usuario y contraseña. Ejemplo: <b>usuario</b> / <b>demo123</b></span>
+              </div>
             </section>
 
             <section class="a-screen" id="a-panel" hidden>
@@ -303,6 +307,7 @@
                   <span class="a-txt">Actividades registradas<small>HISTORIAL</small></span><span class="a-num" id="a-n-acts">0</span>
                 </button>
                 <div class="a-updated"><span>Última actualización</span><b id="a-updated">12:30 hs</b></div>
+                <div class="a-charts" id="a-charts"></div>
                 <div class="a-actions">
                   <button class="p" id="a-b-consultar" type="button">Consultar</button>
                   <button class="s" id="a-b-registrar" type="button">Registrar</button>
@@ -313,8 +318,11 @@
             <section class="a-screen" id="a-meds" hidden>
               <div class="a-top">
                 <div class="a-tabs"><button class="on" type="button" data-go="meds">Medicamentos</button><button type="button" data-go="perfil">Mi perfil</button></div>
-                <button class="a-filt" id="a-filt-btn" type="button" aria-expanded="false" aria-controls="a-chips">Filtros
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7z"/></svg></button>
+                <div class="a-tools">
+                  <button class="a-filt" id="a-filt-btn" type="button" aria-expanded="false" aria-controls="a-chips">Filtros
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7z"/></svg></button>
+                  <button class="a-export" id="a-export" type="button">Exportar CSV</button>
+                </div>
                 <div class="a-chips" id="a-chips" hidden>
                   <button type="button" data-filter="todos" aria-pressed="true">Todos</button>
                   <button type="button" data-filter="alerta" aria-pressed="false">Con alertas</button>
@@ -381,6 +389,8 @@
                   <option value="Movimiento">Movimientos</option>
                   <option value="Consulta">Consultas</option>
                   <option value="Registro">Registros</option>
+                  <option value="Actualización">Actualizaciones</option>
+                  <option value="Eliminación">Eliminaciones</option>
                   <option value="Alerta">Alertas</option>
                   <option value="Acceso">Accesos</option>
                 </select>
@@ -402,7 +412,9 @@
           <h4>Tareas de prueba</h4>
           <p class="prog" id="a-prog">0 de 6 tareas completadas</p>
           <ul class="tasks" id="a-tasks"></ul>
-          <p class="small" id="a-tasks-end" hidden>Tareas completadas. En una validación real, aquí se medirían el tiempo, los errores, la comprensión de funciones y la satisfacción, tal como plantea la sección 5.3.</p>
+          <p class="small" id="a-tasks-end" hidden>Tareas completadas.</p>
+          <button class="reset" id="a-survey-btn" type="button" hidden>Responder encuesta</button>
+          <p class="small" id="a-s-info" hidden>Encuestas guardadas en este navegador: <b id="a-s-count">0</b></p>
           <button class="reset" id="a-reset" type="button">Reiniciar prototipo</button>
           <h4>Qué es y qué no es</h4>
           <p class="small">Es un prototipo académico de baja escala. No usa servidor: los datos se guardan solo en este navegador (localStorage) y no se comparten entre dispositivos. No sustituye las responsabilidades del personal ni los controles sanitarios del establecimiento.</p>
@@ -422,20 +434,49 @@
 
 <dialog id="a-dlg-reg">
   <form id="a-reg-form" novalidate>
-    <h3>Registrar medicamento</h3>
+    <h3 id="a-r-title">Registrar medicamento</h3>
     <label>Nombre y dosis<input id="a-r-name" placeholder="Ibuprofeno 400 mg"></label>
-    <label>Lote<input id="a-r-lote" placeholder="L00789"></label>
+    <label>Categoría<select id="a-r-cat">
+      <option>Analgésico</option><option>Antipirético</option><option>Antiinflamatorio</option>
+      <option>Antibiótico</option><option>Antihistamínico</option><option>Antihipertensivo</option>
+      <option>Antidiabético</option><option>Hipolipemiante</option><option>Gastroprotector</option>
+      <option>Broncodilatador</option><option>Vitamina</option><option>Otros</option>
+    </select></label>
+    <label>Laboratorio<input id="a-r-lab" placeholder="GENFAR"></label>
+    <label>Registro sanitario INVIMA<input id="a-r-invima" placeholder="2021M-0004982"></label>
+    <label>Lote<input id="a-r-lote" placeholder="L24201"></label>
     <label>Stock (unidades)<input id="a-r-stock" type="number" min="0" placeholder="50"></label>
     <label>Vencimiento<input id="a-r-date" type="date"></label>
     <p class="dlg-msg" id="a-r-msg" role="alert"></p>
-    <div class="dlg-actions"><button class="s" type="button" id="a-r-cancel">Cancelar</button><button class="p" type="submit">Guardar</button></div>
+    <div class="dlg-actions"><button class="s" type="button" id="a-r-cancel">Cancelar</button><button class="p" type="submit" id="a-r-save">Guardar</button></div>
   </form>
 </dialog>
 
 <dialog id="a-dlg-det">
   <h3 id="a-d-title">Medicamento</h3>
   <div class="dl" id="a-d-body"></div>
-  <div class="dlg-actions"><button class="s" type="button" id="a-d-close">Cerrar</button><button class="p" type="button" id="a-d-mov">Registrar movimiento</button></div>
+  <h4 class="kardex-t" id="a-kardex-t">Kardex</h4>
+  <ul class="a-kardex" id="a-kardex"></ul>
+  <div class="dlg-actions">
+    <button class="s" type="button" id="a-d-close">Cerrar</button>
+    <button class="s" type="button" id="a-d-edit">Editar</button>
+    <button class="d" type="button" id="a-d-del">Eliminar</button>
+    <button class="p" type="button" id="a-d-mov">Movimiento</button>
+  </div>
+</dialog>
+
+<dialog id="a-dlg-survey">
+  <form id="a-survey-form" novalidate>
+    <h3>Encuesta del prototipo</h3>
+    <p class="small" style="margin:0 0 12px">Califica del 1 (difícil) al 5 (muy fácil). Tus respuestas se guardan solo en este navegador.</p>
+    <label>Facilidad de uso<select id="a-s-ease"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+    <label>Comprensión de las funciones<select id="a-s-und"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+    <label>Satisfacción general<select id="a-s-sat"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+    <label>Tiempo percibido de las tareas<select id="a-s-time"><option>Menos de 1 minuto</option><option>1 a 3 minutos</option><option>3 a 5 minutos</option><option>Más de 5 minutos</option></select></label>
+    <label>Dificultades u observaciones<textarea id="a-s-notes" rows="3" placeholder="Comenta qué te pareció difícil o qué mejorarías..."></textarea></label>
+    <p class="dlg-msg" id="a-s-msg" role="alert"></p>
+    <div class="dlg-actions"><button class="s" type="button" id="a-s-cancel">Cancelar</button><button class="p" type="submit">Enviar</button></div>
+  </form>
 </dialog>
 
 <script src="js/app.js"></script>
