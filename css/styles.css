@@ -176,7 +176,9 @@
   .a-demo b { color: #b5d8c7; font-weight: 700; }
   .a-msg { min-height: 1.4em; margin: 12px 0 0; color: #f6efe6; font-size: .9rem; text-align: center; max-width: none; }
   .a-msg.err { color: #ffc9a8; }
-  .a-hero { background: var(--deep); padding: 44px 22px 48px; }
+  .a-hero { background: var(--deep); padding: 44px 22px 48px; position: relative; }
+  .a-exit { position: absolute; top: 18px; right: 18px; display: flex; align-items: center; gap: 7px; background: rgba(246,239,230,.12); border: 1px solid rgba(246,239,230,.35); color: #f6efe6; padding: 8px 14px; border-radius: 12px; font-size: .9rem; font-weight: 600; }
+  .a-exit svg { width: 18px; height: 18px; }
   .a-sheet { margin-top: -26px; background: var(--cream); border-radius: 40px 40px 0 0; padding: 26px 22px 24px; }
   .a-sheet h3 { margin: 0; font-size: 1.75rem; font-weight: 800; }
   .a-sub { margin: 14px 0 0; font-size: 1rem; color: var(--ink); max-width: none; }

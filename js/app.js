@@ -202,6 +202,7 @@
     $('a-n-alerts').textContent = alertMeds().length;
     $('a-n-acts').textContent = acts.length;
     $('a-updated').textContent = ft(last) + ' hs';
+    var eu = document.getElementById('a-exit-user'); if (eu) eu.textContent = user || 'Salir';
     $('a-p-total').textContent = meds.length;
     $('a-p-acts').textContent = acts.length;
     $('a-who').textContent = user || '—';
@@ -238,7 +239,10 @@
   $('a-forgot').addEventListener('click', function () {
     var m = $('a-login-msg'); m.className = 'a-msg'; m.textContent = 'Pide a tu administrador que restablezca tu contraseña.';
   });
-  $('a-logout').addEventListener('click', function () { log('Acceso', 'Cierre de sesión de ' + user); user = ''; $('a-user').value = ''; go('login'); });
+  function logout() { log('Acceso', 'Cierre de sesión de ' + user); user = ''; $('a-user').value = ''; go('login'); }
+  $('a-logout').addEventListener('click', logout);
+  var exitBtn = document.getElementById('a-exit');
+  if (exitBtn) exitBtn.addEventListener('click', function () { logout(); });
 
   $('a-b-consultar').addEventListener('click', function () { go('meds'); });
   $('a-b-registrar').addEventListener('click', function () { openReg(null); });
