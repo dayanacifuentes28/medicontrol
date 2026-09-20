@@ -4,6 +4,10 @@ Propuesta de innovación (ACA) y prototipo MVP de MediControl, un sistema digita
 
 Sitio estático (HTML, CSS y JavaScript). No necesita instalación ni servidor.
 
+En línea: **https://dayanacifuentes28.github.io/medicontrol/**
+
+> El sitio ya está publicado con GitHub Pages. El siguiente bloque «Subir a GitHub» es solo de referencia para otros equipos; si modificas los archivos, basta con hacer `git add . && git commit -m "mensaje" && git push` para que el flujo de GitHub Actions lo actualice automáticamente.
+
 ## Estructura
 
 ```
@@ -39,9 +43,12 @@ Crea antes el repositorio vacío `medicontrol` en GitHub (sin README ni .gitigno
 
 ## Publicar con GitHub Pages
 
-1. En el repositorio: **Settings > Pages**.
-2. En **Build and deployment**, elige **Deploy from a branch**, rama `main` y carpeta `/ (root)`.
-3. Guarda. En uno o dos minutos el sitio queda en `https://TU_USUARIO.github.io/medicontrol/`.
+Este proyecto ya está publicado. La publicación usa el flujo **GitHub Actions** que se encuentra en `.github/workflows/static.yml`: cada vez que se hace `push` a la rama `main`, el sitio se reconstruye y despliega solo.
+
+Descripción del flujo (por si se desea replicar en otro repositorio):
+
+- `actions/configure-pages`, `upload-pages-artifact` (con `path: "."`) y `deploy-pages`.
+- En el repositorio, **Settings > Pages** debe tener habilitado **GitHub Actions** como origen de Build and deployment (ya está configurado).
 
 GitHub Pages en cuentas gratuitas requiere que el repositorio sea público. Antes de hacerlo público, revisa que estés de acuerdo con que aparezcan los nombres de los autores y del docente.
 
