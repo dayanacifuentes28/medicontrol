@@ -34,7 +34,7 @@
   }
   html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 64px); scroll-behavior: smooth; background: var(--cream); }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-  *, *::before, *::after { box-sizing: border-box; }
+  *, *::before, *::after { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
   body { margin: 0; font-family: "Raleway", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--cream); color: var(--text); line-height: 1.65; font-size: 1.05rem; }
   button, input, select, textarea { font: inherit; color: inherit; }
   button { cursor: pointer; }
@@ -244,7 +244,7 @@
   .a-out { margin-top: 18px; height: 48px; padding: 0 26px; border: 0; border-radius: 14px; background: var(--mist); color: var(--ink); font-size: 1.05rem; }
   .a-form { background: var(--card); border-radius: 18px; padding: 14px 15px 16px; margin-bottom: 18px; display: grid; gap: 10px; }
   .a-form label { font-size: .82rem; font-weight: 700; color: var(--ink); display: block; }
-  .a-form select, .a-form input { display: block; width: 100%; height: 42px; margin-top: 4px; padding: 0 12px; border: 1px solid var(--muted); border-radius: 10px; background: #f6efe6; color: #17454f; font-size: .95rem; }
+  .a-form select, .a-form input { display: block; width: 100%; height: 42px; margin-top: 4px; padding: 0 12px; border: 1px solid var(--muted); border-radius: 10px; background: #f6efe6; color: #17454f; font-size: 1rem; }
   .a-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .a-form button { height: 46px; border: 0; border-radius: 12px; background: var(--deep); color: #f6efe6; font-weight: 700; font-size: 1rem; }
   .a-form .a-msg { color: var(--warn); margin: 0; min-height: 0; text-align: left; font-weight: 600; }
@@ -253,7 +253,7 @@
   .a-hist li { background: var(--card); color: var(--card-ink); border-radius: 14px; padding: 9px 13px; font-size: .86rem; line-height: 1.4; }
   .a-hist time { display: block; color: var(--muted); font-size: .78rem; }
   .a-hist b { color: var(--ink); }
-  .a-sel { width: 100%; height: 44px; border-radius: 12px; border: 0; padding: 0 12px; background: var(--mist); color: var(--ink); margin-bottom: 12px; font-size: .95rem; }
+  .a-sel { width: 100%; height: 44px; border-radius: 12px; border: 0; padding: 0 12px; background: var(--mist); color: var(--ink); margin-bottom: 12px; font-size: 1rem; }
   .a-nav { display: flex; justify-content: space-around; align-items: center; padding: 8px 8px 10px; background: var(--cream); border-top: 1px solid var(--mist); flex: none; }
   .a-nav[hidden] { display: none; }
   .a-nav button { position: relative; background: none; border: 0; color: var(--ink); padding: 6px 14px; border-radius: 14px; font-size: .68rem; font-weight: 600; display: flex; flex-direction: column; align-items: center; gap: 2px; }
@@ -264,7 +264,7 @@
   .a-toast { position: absolute; left: 50%; bottom: 84px; transform: translateX(-50%); background: var(--deep); color: #f6efe6; padding: 10px 18px; border-radius: 12px; font-size: .9rem; z-index: 5; white-space: nowrap; max-width: 92%; overflow: hidden; text-overflow: ellipsis; }
   .a-toast[hidden] { display: none; }
 
-  dialog { width: min(92vw, 380px); border: 0; border-radius: 24px; padding: 22px; background: var(--cream); color: var(--ink); }
+  dialog { width: min(92vw, 380px); max-height: min(92vh, 780px); overflow-y: auto; margin: auto; border: 0; border-radius: 24px; padding: 22px; background: var(--cream); color: var(--ink); }
   dialog::backdrop { background: rgba(8,26,30,.6); }
   dialog h3 { margin: 0 0 14px; font-size: 1.4rem; font-weight: 800; color: var(--ink); }
   dialog label { display: block; margin: 0 0 12px; font-size: .88rem; font-weight: 700; }
@@ -288,3 +288,38 @@
   footer { margin-top: 72px; background: var(--deep); color: var(--on-deep); padding: 40px 0 calc(40px + env(safe-area-inset-bottom, 0px)); font-size: .92rem; }
   footer p { color: var(--on-deep); max-width: 70ch; }
   footer a { color: var(--mint); }
+
+  /* Adaptabilidad a pantallas y dispositivos */
+
+  @media (max-width: 760px) {
+    .wrap { padding: 0 18px; }
+    .site-hero { border-radius: 0 0 34px 34px; padding: 52px 0 56px; }
+    .cta { margin: 22px 0 36px; }
+    .proto { border-radius: 24px; padding: 34px 0 40px; margin-top: 28px; }
+    .proto-badge { font-size: .72rem; padding: 5px 11px; }
+    section.doc { padding: 40px 0 6px; }
+    footer { margin-top: 48px; }
+  }
+
+  @media (max-width: 520px) {
+    .site-head .wrap { gap: 10px; height: auto; min-height: 56px; flex-wrap: wrap; padding: 8px 0; }
+    .mark { font-size: 1rem; }
+    .site-head nav { gap: 12px; font-size: .85rem; }
+    .hero-logo { width: 84px; height: 84px; margin-bottom: 18px; }
+    .cta .btn { width: 100%; text-align: center; }
+    .phone { width: 100%; border-radius: 28px; border-width: 8px; }
+    .a-sheet { border-radius: 28px 28px 0 0; padding-left: 16px; padding-right: 16px; }
+    .a-body, .a-plain { padding-left: 16px; padding-right: 16px; }
+    .a-count { margin-left: 16px; margin-right: 16px; }
+    .dlg-actions { flex-wrap: wrap; }
+    .dlg-actions button { min-width: 128px; flex: 1 1 auto; }
+    .a-form .row { grid-template-columns: 1fr; }
+    .toc ol { columns: 1; }
+  }
+
+  @media (max-height: 640px) and (orientation: landscape) {
+    .phone { height: min(820px, calc(100vh - 16px)); }
+  }
+
+  section.doc:target h2 { animation: mark-sec 1.6s ease; }
+  @keyframes mark-sec { 0% { color: var(--warn); } 100% { color: var(--ink); } }
